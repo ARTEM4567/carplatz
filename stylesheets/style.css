@@ -98,6 +98,7 @@ h1{
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  overflow: hidden;
 }
 
 .content-4{
@@ -116,6 +117,7 @@ h1{
   height: 100px;
   overflow: hidden;
   margin-top: 40px;
+  width: 100vw;
 }
 
 .marquee-items{
@@ -126,6 +128,7 @@ h1{
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-delay: -20s;
+  overflow: hidden;
 }
 
 .second-marquee{
@@ -141,10 +144,12 @@ h1{
 .content-5{
   margin-top: 100px;
   margin-bottom: 250px;
+  padding: 0 10px;
 }
 
 .content-6{
   margin-bottom: 100px;
+  padding: 0 10px;
 }
 
 .content-6 .title h3{
@@ -158,10 +163,11 @@ h1{
 }
 
 .content-6 ol{
-  background-color: #f2f2f2;
-  padding: 30px 0;
-  padding-left: 40px;
+  background-color: rgb(41, 51, 107);
+  color: white;
+  padding: 30px 20px 30px 40px;
   margin-top: 40px;
+  font-size: 18px;
 }
 
 .content-6 ol li{
@@ -267,6 +273,7 @@ h1{
 
 .content-7{
   margin-top: 100px;
+  padding: 0 10px;
 }
 
 .content-7 .title h3{
@@ -308,6 +315,10 @@ h1{
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.slider{
+  padding: 0 10px;
 }
 
 .content-2 {
@@ -354,12 +365,12 @@ h1{
   height: 300px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 101%;
+  background-size: 115%;
   transition: .3s;
 }
 
 .content-8 .brands .item:hover{
-  background-size: 110%;
+  background-size: 125%;
 }
 
 .content-8 .brands .item:hover img, .content-8 .brands .item:hover p{
@@ -415,6 +426,7 @@ h1{
   background-color: #f2f2f2;
   display: flex;
   border-radius: 3px;
+  padding: 0 10px;
 }
 
 .content-3 .side {
@@ -468,18 +480,22 @@ h2 {
   height: 23px;
 }
 
-.content-9 .car-cards .level{
-  display: flex;
+.content-9{
+  padding: 0 10px;
+}
+
+.content-9 .car-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .content-9 .car-card{
-  width: 32%;
   border: solid 1px #cbcbcb;
-  border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   transition: .3s;
+  margin-bottom: 15px;
 }
 
 .content-9 .car-card:hover{
@@ -493,48 +509,63 @@ h2 {
   background-repeat: no-repeat;
   width: 100%;
   height: 240px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.content-9 .car-card .card-info{
-  margin: 5px;
 }
 
 .content-9 .car-card .card-info h3{
-  margin-top: 10px;
+  padding: 10px;
   font-size: 25px;
+  font-weight: 400;
+  border-bottom: solid 1px #cbcbcb;
+  margin: 0;
 }
 
-.content-9 .car-card .card-info p{
-  margin-top: -10px;
-  font-size: 14px;
+.content-9 .car-card .card-info .car-name{
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
 }
 
 .content-9 .car-card .card-info .card-parameters{
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  justify-content: space-between;
+  padding: 10px;
+  padding-top: 0;
+  margin: 0;
 }
 
-.content-9 .car-card .card-info .card-parameters p{
-  margin-top: 0px;
+.content-9 .see-more-div{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.content-9 .car-card .card-info .card-parameters p img{
-  margin-right: 10px;
+.content-9 .see-more-div a{
+  position: relative;
+  font-size: 18px;
+  padding: 5px 10px;
+  padding-right: 60px;
+  border: solid 1px transparent;
+}
+
+.content-9 .see-more-div a::after{
+  transition: .3s;
+  position: absolute;
+  right: 20px;
+  content: '';
+  display: inline-block;
+  background-image: url('../images/right-arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 25px;
   height: 25px;
-  opacity: .5;
 }
 
-.content-9 .car-card .card-info .car-price{
-  text-align: center;
-  font-weight: 300;
-  font-size: 30px;
-  margin: 0;
-  padding-top: 3px;
-  border-top: solid 1px #cbcbcb;
+.content-9 .see-more-div a:hover{
+  border: solid 1px black;
+}
+
+.content-9 .see-more-div a:hover::after{
+  right: 10px;
 }
 
 .content-10{
@@ -548,7 +579,7 @@ h2 {
 
 .content-10 .background-black{
   background-color: rgba(0, 0, 0, 0.75);
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 
 .content-10 .container-a{
@@ -606,6 +637,7 @@ footer a{
 
 footer .top-footer{
   background-color: #343434;
+  padding: 0 10px;
 }
 
 footer .top-footer .container-a{
@@ -634,6 +666,7 @@ footer .top-footer .container-a .column{
 
 footer .bottom-footer{
   background-color: #242424;
+  padding: 0 10px;
 }
 
 footer .bottom-footer .container-a{
@@ -664,12 +697,10 @@ footer .bottom-footer .container-a p{
 @keyframes appearance {
   from {
     transform: translateY(10vh);
-    opacity: 0;
   }
 
   to {
     transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -731,5 +762,240 @@ footer .bottom-footer .container-a p{
 
   90% {
     width: 100%;
+  }
+}
+
+@media (max-width: 1600px){
+  .content-8 .brands .item{
+    background-size: 131%;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: 141%;
+  }
+}
+
+@media (max-width: 1400px){
+  .content-8 .brands .item{
+    background-size: 141%;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: 151%;
+  }
+}
+
+@media (max-width: 1300px){
+  .content-8 .brands .item{
+    background-size: 151%;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: 161%;
+  }
+}
+
+@media (max-width: 1210px){
+  .content-8 .brands{
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .content-8 .brands .item{
+    background-size: 120%;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: 130%;
+  }
+}
+
+@media (max-width: 1200px){
+  .content-5 .about-us{
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding-top: 140px;
+    padding-bottom: 200px;
+  }
+
+  .content-5 .about-us .left-side{
+    width: 100%;
+    height: 300px;
+  }
+
+  .content-5 .about-us .right-side{
+    width: 100%;
+    height: 300px;
+    margin-top: -300px;
+    background: none;
+  }
+
+  .content-5 .about-us .right-side img:first-child{
+    width: 484px;
+    height: 100px;
+    top: -120px;
+    left: calc(50% - 242px);
+  }
+
+  .content-5 .about-us .right-side img:last-child{
+    width: 617px;
+    height: 400px;
+    bottom: -300px;
+    left: calc(50% - 308.5px);
+  }
+}
+
+@media (max-width: 1020px){
+  .content-8 .brands{
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .content-8 .brands .item{
+    background-size: 165%;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: 175%;
+  }
+
+  .slider .img-car{
+    height: 500px;
+  }
+}
+
+@media(max-width: 950px){
+  .content-7 .advantages {
+    grid-template-columns: repeat(2, 49%);
+  }
+
+  .content-9 .car-card .card-img{
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px){
+  .content-9 .car-cards{
+    grid-template-columns: repeat(2, 49%);
+  }
+}
+
+@media (max-width: 750px){
+  .content-8 .brands{
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .content-8 .brands .item{
+    background-size: 115%;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: 125%;
+  }
+
+  .slider .img-car{
+    height: 400px;
+  }
+
+  .content-3{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-3 .side{
+    width: 100%;
+  }
+
+  .content-10 .container-a{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-10 .container-a .left-side{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .content-10 .container-a .right-side{
+    width: 90%;
+  }
+}
+
+@media (max-width: 670px){
+  .content-8 .container-a{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .content-7 .title h3{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .content-7 .title p{
+    text-align: center;
+  }
+
+  .content-6 .title h3{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .content-6 .title p{
+    text-align: center;
+  }
+
+  .content-6 ol{
+    font-size: 16px;
+  }
+
+  .content-4 h2{
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px){
+  .content-9 .car-cards{
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .content-9 .car-card .card-img{
+    height: 300px;
+  }
+
+  .content-8 .brands{
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .content-8 .brands .item{
+    height: 33vh;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .content-8 .brands .item:hover{
+    background-size: cover;
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  footer .top-footer .container-a{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  footer .top-footer .container-a .column{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 400px){
+  footer .bottom-footer .container-a{
+    flex-direction: column;
+  }
+
+  footer .bottom-footer .container-a a{
+    border: none;
+    margin: 0;
+    padding: 0;
   }
 }
