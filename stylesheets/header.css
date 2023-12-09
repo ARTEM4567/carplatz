@@ -1,0 +1,146 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header .container-a {
+    position: relative;
+}
+
+header .mobile-menu-button {
+    display: none;
+}
+
+header .mobile-menu-button .line {
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: black;
+}
+
+header .mobile-menu {
+    display: none;
+}
+
+header {
+    padding: 10px 0;
+    border-bottom: solid 1px rgb(220, 220, 220);
+    height: 52px;
+    position: sticky;
+    top: -1px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+}
+
+nav a {
+  opacity: .8;
+  font-size: 14px;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+@keyframes mobile-menu-appearance{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@media (max-width: 670px) {
+    header nav {
+        display: none;
+    }
+
+    header .container-a {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo {
+        position: static;
+    }
+
+    header .mobile-menu-button {
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 5.5px;
+        width: 31px;
+        height: 20px;
+        background: none;
+        border: none;
+    }
+
+    header .mobile-menu-button .line {
+        position: absolute;
+        top: 10px;
+        transition: .3s;
+    }
+
+    header .mobile-menu-button .close-line:first-child {
+        top: 0;
+    }
+
+    header .mobile-menu-button .close-line:last-child {
+        top: 20px;
+    }
+
+    header .mobile-menu-button-active .line {
+        opacity: 0;
+    }
+
+    header .mobile-menu-button-active .close-line:first-child {
+        top: 10px;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+    header .mobile-menu-button-active .close-line:last-child {
+        top: 10px;
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+
+    header .mobile-menu-active {
+        padding-top: 20px;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 41px);
+        background-color: white;
+        animation-name: mobile-menu-appearance;
+        animation-duration: .3s;
+    }
+
+    header .mobile-menu a {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+}
