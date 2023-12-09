@@ -81,7 +81,7 @@ nav a:hover {
 
 .background {
   width: 100%;
-  height: 100vh;
+  height: 101vh;
   background: url('../images/backgroundimg.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -201,6 +201,7 @@ h1{
   width: 45%;
   height: 400px;
   padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .about-us .left-side .text{
