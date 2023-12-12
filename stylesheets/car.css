@@ -6,6 +6,10 @@
     /* transition: .3s; */
 }
 
+.display-none{
+    display: none;
+}
+
 button{
     border: none;
 }
@@ -17,6 +21,25 @@ button{
 
 header{
     z-index: 5;
+}
+
+.back-to-results{
+    color: rgb(5, 52, 255);
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.back-to-results:hover{
+    text-decoration: underline;
+}
+
+.back-to-results img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 .slider{
@@ -99,12 +122,16 @@ header{
     height: 35vh;
 }
 
+.back-to-results-div{
+    padding: 0 10px;
+}
+
 .content-1{
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 30px;
-    position: relative;
+    padding: 0 10px;
 }
 
 .content-1 .left-side{
@@ -113,10 +140,15 @@ header{
 
 .content-1 .right-side{
     position: sticky;
-    top: 82px;
-    right: 0px;
+    top: 62px;
+    right: 0;
+    height: min-content;
+    padding: 10px;
+    margin-left: 10px;
     width: 35%;
-    padding-left: 10px;
+    border: 1px solid #cbcbcb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 h1{
@@ -142,6 +174,7 @@ h1{
     color: white;
     background-color: rgb(59, 75, 167);
     display: inline-block;
+    margin-bottom: 0;
 }
 
 .message-us{
@@ -154,6 +187,52 @@ h1{
     background-color: rgb(59, 75, 167);
     padding: 5px;
     border-radius: 5px;
+    transition: .3s;
+}
+
+.message-us:hover{
+    background-color: rgb(46, 59, 133);
+}
+
+.auction-status{
+    margin-top: 20px;
+}
+
+.auction-status a img{
+    width: 50%;
+}
+
+.auction-status a{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.auction-status h2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.auction-status h2 span{
+    font-size: 15px;
+    color: rgb(5, 52, 255);
+}
+
+.auction-status .auction-status-p, .auction-status .auction-start, .auction-status .first-bid{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.auction-status .auction-status-p span, .auction-status .auction-start span, .auction-status .first-bid span{
+    font-weight: 500;
+}
+
+.auction-status h2 span:hover{
+    text-decoration: underline;
+}
+
+.auction-status h2 span:active{
+    color: rgb(1, 37, 199);
 }
 
 .imgs .img-car{
@@ -254,4 +333,140 @@ h1{
 
 .imgs .bottom-imgs .img-car:hover{
     transform: scale(1.05);
+}
+
+.content-1 .left-side .car-info{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.content-1 .left-side .car-info .car-info-1{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+
+.content-1 .left-side .car-info .car-info-1 .item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.content-1 .left-side .car-info .car-info-1 .item .img-param{  
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.content-1 .left-side .car-info .car-info-1 .item img{
+    width: 25px;
+    height: 25px;
+}
+
+.content-1 .left-side .car-info .car-info-1 .item p{
+    margin: 0;
+}
+
+.content-1 .left-side .car-info .car-info-2{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    column-gap: 20px;
+}
+
+.content-1 .left-side .car-info .car-info-2 .car-param{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(232, 231, 230);
+}
+
+.content-1 .left-side .car-info .car-info-2 .car-param p{
+    margin: 0;
+    font-size: 16px;
+}
+
+.content-1 .left-side .car-info .car-info-2 .car-param p:last-child{
+    color: rgb(88, 88, 88);
+    font-weight: 500;
+}
+
+.content-1 .left-side .car-info .car-info-3{
+    margin-top: 30px;
+}
+
+.content-1 .left-side .car-info .car-info-3 p{
+    font-weight: 500;
+    color: rgb(88, 88, 88);
+    margin-bottom: 5px;
+}
+
+.content-1 .left-side .car-info .car-info-3 .read-more{
+    background: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(5, 52, 255);
+}
+
+.content-1 .left-side .car-info .car-info-3 .read-more:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px){
+    .gallery .img-car {
+        height: 56.25vw;
+    }
+
+    .gallery .gallery-row .img-car {
+        height: 27.5vw;
+    }
+}
+
+@media (max-width: 900px){
+    .content-1{
+        flex-direction: column;
+    }
+
+    .content-1 .left-side{
+        width: 100%;
+    }
+
+    .content-1 .right-side{
+        position: static;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .imgs .top-img .img-car{
+        height: calc(56.25vw - 20px);
+    }
+
+    .imgs .bottom-imgs .img-car {
+        height: 16.71vw;
+    }
+
+    .auction-status a img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 650px){
+    .content-1 .left-side .car-info .car-info-1 {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (max-width: 375px){
+    .content-1 .left-side .car-info .car-info-2 {
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0;
+    }
+}
+
+@media (max-width: 350px){
+    .content-1 .left-side .car-info .car-info-1 {
+        grid-template-columns: repeat(1, 100%);
+    }
 }
